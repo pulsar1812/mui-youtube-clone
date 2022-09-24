@@ -4,7 +4,7 @@ import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
 
 import {
-  demoThumbnailUrl,
+  // demoThumbnailUrl,
   demoChannelUrl,
   demoVideoUrl,
   demoChannelTitle,
@@ -20,7 +20,7 @@ const VideoCard = ({ video }) => {
   return (
     <Card
       sx={{
-        width: { xs: '100%', md: '20rem' },
+        width: { xs: '100%', sm: '22.5rem', md: '20rem' },
         boxShadow: 'none',
         borderRadius: 0,
       }}
@@ -29,7 +29,10 @@ const VideoCard = ({ video }) => {
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
-          sx={{ width: 358, height: 180 }}
+          sx={{
+            width: { xs: '100%', sm: '22.5rem', md: '20rem' },
+            height: '11.25rem',
+          }}
         />
       </Link>
       <CardContent sx={{ backgroundColor: '#1e1e1e', height: '6.5rem' }}>
